@@ -1,0 +1,182 @@
+@import url("https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap");
+
+:root {
+  --LightRed: hsla(0, 100%, 67%, 0.1);
+  --OrangeyYellow: hsla(39, 100%, 56%, 0.1);
+  --GreenTeal: hsla(166, 100%, 37%, 0.1);
+  --CobaltBlue: hsla(234, 85%, 45%, 0.1);
+
+  /*gradients*/
+  --LightSlateBlue/*(background)*/: hsl(252, 100%, 67%);
+  --LightRoyalBlue/*(background)*/: hsl(241, 81%, 54%);
+  --VioletBlue/*(circle)*/: hsla(256, 72%, 46%, 1);
+  --PersianBlue/*(circle)*/: hsla(241, 72%, 46%, 0);
+
+  /*Neutral*/
+
+  --White: hsl(0, 0%, 100%);
+  --PaleBlue: hsl(221, 100%, 96%);
+  --LightLavender: hsl(241, 100%, 89%);
+  --DarkGrayBlue: hsl(224, 30%, 27%);
+}
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Hanken Grotesk", sans-serif;
+}
+
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+body {
+  min-height: 100vh;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.main-card {
+  display: flex;
+}
+
+.card-1 {
+  background: linear-gradient(var(--LightSlateBlue), var(--LightRoyalBlue));
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  flex: 1;
+}
+
+.card-1 .title {
+  color: var(--LightLavender);
+  margin-bottom: 25px;
+}
+
+.score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(var(--VioletBlue), var(--PersianBlue));
+  border-radius: 50%;
+  height: 150px;
+  width: 150px;
+  margin-bottom: 25px;
+}
+
+.score h1 {
+  font-size: 60px;
+  color: white;
+}
+.score span {
+  color: var(--LightLavender);
+  font-size: 13px;
+}
+
+h2 {
+  color: white;
+  margin-bottom: 15px;
+}
+
+.card-1 .info {
+  text-align: center;
+  color: var(--LightLavender);
+}
+
+.card-2 {
+  flex: 1;
+  padding: 30px;
+}
+
+h3 {
+  color: var(--DarkGrayBlue);
+  margin-bottom: 20px;
+}
+
+.small-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.small-card.red {
+  background-color: var(--LightRed);
+}
+
+.small-card.yellow {
+  background-color: var(--OrangeyYellow);
+}
+.small-card.green {
+  background-color: var(--GreenTeal);
+}
+.small-card.blue {
+  background-color: var(--CobaltBlue);
+}
+.small-card img {
+  margin-right: 10px;
+}
+.small-card div {
+  display: flex;
+  align-items: center;
+}
+
+.small-card.red .category {
+  color: hsl(0, 100%, 67%);
+}
+.small-card.yellow .category {
+  color: hsl(39, 100%, 56%);
+}
+.small-card.green .category {
+  color: hsl(166, 100%, 37%);
+}
+.small-card.blue .category {
+  color: hsl(234, 85%, 45%);
+}
+.score-wrap {
+  color: hsla(224, 30%, 27%, 0.6);
+}
+
+.score-num {
+  color: var(--DarkGrayBlue);
+}
+
+.card-2 button {
+  width: 100%;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  border-radius: 30px;
+  background-color: var(--DarkGrayBlue);
+  color: white;
+}
+
+.card-2 button:hover {
+  background: linear-gradient(var(--LightSlateBlue), var(--LightRoyalBlue));
+}
+
+@media (max-width: 850px) {
+  .main-card {
+    flex-direction: column;
+  }
+  .card-1 {
+    border-radius: 0 0 20px 20px;
+  }
+}
